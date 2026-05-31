@@ -1,5 +1,50 @@
-body{
-    background:black;
-    color:white;
-    text-align:center;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
 }
+
+body{
+background:url('assets/file_00000000fce07207979e7e2e52134f78.png');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+overflow-x:hidden;
+}
+
+.overlay{
+background:rgba(0,0,0,0.65);
+padding:30px;
+width:90%;
+max-width:900px;
+border-radius:25px;
+backdrop-filter:blur(8px);
+box-shadow:0 0 30px rgba(255,0,0,0.6);
+animation:fadeIn 2s ease;
+}
+
+.title{
+font-size:4rem;
+color:#ff2a2a;
+text-shadow:
+0 0 10px #ff0000,
+0 0 20px #ff0000,
+0 0 40px #ff0000;
+margin-bottom:20px;
+animation:glow 2s infinite alternate;
+}
+
+.welcome{
+font-size:1.4rem;
+margin-bottom:15px;
+font-weight:bold;
+}
+
+.message
