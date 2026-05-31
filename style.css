@@ -1,50 +1,114 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Orbitron',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron',sans-serif;
 }
 
 body{
-background:url('assets/file_00000000fce07207979e7e2e52134f78.png');
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-overflow-x:hidden;
+    background:url('assets/file_00000000fce07207979e7e2e52134f78.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    overflow-x:hidden;
 }
 
 .overlay{
-background:rgba(0,0,0,0.65);
-padding:30px;
-width:90%;
-max-width:900px;
-border-radius:25px;
-backdrop-filter:blur(8px);
-box-shadow:0 0 30px rgba(255,0,0,0.6);
-animation:fadeIn 2s ease;
+    background:rgba(0,0,0,0.65);
+    padding:30px;
+    width:90%;
+    max-width:900px;
+    border-radius:25px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(255,0,0,0.7);
+    animation:fadeIn 1.5s ease;
 }
 
 .title{
-font-size:4rem;
-color:#ff2a2a;
-text-shadow:
-0 0 10px #ff0000,
-0 0 20px #ff0000,
-0 0 40px #ff0000;
-margin-bottom:20px;
-animation:glow 2s infinite alternate;
+    font-size:4rem;
+    color:#ff2a2a;
+    text-shadow:
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 40px #ff0000;
+    margin-bottom:20px;
+    animation:glow 2s infinite alternate;
 }
 
 .welcome{
-font-size:1.4rem;
-margin-bottom:15px;
-font-weight:bold;
+    font-size:1.4rem;
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
-.message
+.message{
+    line-height:1.8;
+    font-size:1rem;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.buttons a{
+    width:280px;
+    text-decoration:none;
+    color:white;
+    padding:15px;
+    border-radius:15px;
+    background:rgba(255,0,0,0.25);
+    border:1px solid #ff3333;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.buttons a:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 0 25px red;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px red;
+    }
+    to{
+        text-shadow:0 0 35px red;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+    .title{
+        font-size:2.5rem;
+    }
+
+    .message{
+        font-size:0.9rem;
+    }
+
+    .buttons a{
+        width:90%;
+    }
+
+}
